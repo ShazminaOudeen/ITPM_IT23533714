@@ -40,7 +40,7 @@ test_automation/
 ### 1. Clone or download this repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/ShazminaOudeen/ITPM_IT23533714.git
 cd test_automation
 ```
 
