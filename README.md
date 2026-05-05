@@ -1,9 +1,10 @@
 # Assignment 1 – Transliteration Accuracy Testing
-**IT3040 – IT Project Management | BSc (Hons) in Information Technology – Year 3**  
+
+**IT3040 – IT Project Management | BSc (Hons) in Information Technology – Year 3 Semester 1**  
 **Student ID:** IT23533714  
 **Option:** Option 1 – Chat Sinhala Transliteration Testing (for students familiar with Sinhala)
 
----
+\---
 
 ## Overview
 
@@ -14,91 +15,91 @@ The script uses **Playwright** to automatically send Singlish (chat-style romani
 
 A total of **50 negative test cases** were identified across all 24 Singlish input types defined in the assignment.
 
----
+\---
 
 ## Project Structure
 
 ```
-test_automation/
+test\_automation/
 │
-├── test_automation.py                        # Main Playwright automation script
+├── test\_automation.py                        # Main Playwright automation script
 ├── Assignment 1 - Test cases - IT23533714.xlsx  # Test cases with results
 └── README.md                                 # This file
 ```
 
----
+\---
 
 ## Prerequisites
 
-- **Python 3.11 or 3.12** – [Download here](https://www.python.org/downloads/)
-- **Google Chrome** (recommended) – [Download here](https://www.google.com/chrome/)
+* **Python 3.11 or 3.12** – [Download here](https://www.python.org/downloads/)
+* **Google Chrome** (recommended) – [Download here](https://www.google.com/chrome/)
 
----
+\---
 
 ## Installation
 
-### 1. Clone or download this repository
+### 1\. Clone or download this repository
 
 ```bash
-git clone <your-repo-url>
-cd test_automation
+git clone https://github.com/ShazminaOudeen/ITPM\_IT23533714.git
+cd test\_automation
 ```
 
 Or download the ZIP and extract it to your `D:` drive, then open Command Prompt and run:
 
 ```cmd
-cd /d D:\test_automation
+cd /d D:\\test\_automation
 ```
 
-### 2. Install Python dependencies
+### 2\. Install Python dependencies
 
 ```bash
 pip install -U pip
 pip install playwright openpyxl
 ```
 
-### 3. Install Playwright browsers
+### 3\. Install Playwright browsers
 
 ```bash
 playwright install
 ```
 
----
+\---
 
 ## Running the Tests
 
-From inside the `test_automation` folder, run the following command:
+From inside the `test\_automation` folder, run the following command:
 
 ```bash
-python test_automation.py --excel "Assignment 1 - Test cases - IT23533714.xlsx" --url "https://www.pixelssuite.com/chat-translator" --wait-ms 5000 --type-delay-ms 80 --slow-mo-ms 200 --save-every 1 --keep-open
+python test_automation.py --excel "Assignment 1 - Test cases - IT23533714.xlsx" --url "https://www.pixelssuite.com/chat-translator" --input-col "Input" --expected-col "Expected output" --actual-col "Actual output" --status-col "Status" --wait-ms 5000 --type-delay-ms 80 --slow-mo-ms 200 --save-every 1 --keep-open
 ```
 
 ### Command-line Arguments
 
-| Argument | Description | Default |
-|---|---|---|
-| `--excel` | Path to the Excel test cases file | Auto-detected |
-| `--url` | URL of the web application to test | `https://www.pixelssuite.com/chat-translator` |
-| `--wait-ms` | Time (ms) to wait for translation output | `5000` |
-| `--type-delay-ms` | Delay (ms) between keystrokes when typing | `30` |
-| `--slow-mo-ms` | Slow motion delay (ms) for browser actions | `0` |
-| `--save-every` | Save Excel after every N test cases | `0` (save at end) |
-| `--keep-open` | Keep browser open after tests complete | `false` |
-| `--headless` | Run browser in headless mode (no UI) | `false` |
+|Argument|Description|Default|
+|-|-|-|
+|`--excel`|Path to the Excel test cases file|Auto-detected|
+|`--url`|URL of the web application to test|`https://www.pixelssuite.com/chat-translator`|
+|`--wait-ms`|Time (ms) to wait for translation output|`5000`|
+|`--type-delay-ms`|Delay (ms) between keystrokes when typing|`30`|
+|`--slow-mo-ms`|Slow motion delay (ms) for browser actions|`0`|
+|`--save-every`|Save Excel after every N test cases|`0` (save at end)|
+|`--keep-open`|Keep browser open after tests complete|`false`|
+|`--headless`|Run browser in headless mode (no UI)|`false`|
 
----
+\---
 
 ## Test Results
 
 After running the script, open the Excel file and check the **Actual output** and **Status** columns, which are filled in automatically.
 
-- **PASS** – Actual output matches the expected Sinhala output exactly
-- **FAIL** – Actual output differs from the expected output
-- **UI Error** – The script encountered an issue interacting with the page
+* **PASS** – Actual output matches the expected Sinhala output exactly
+* **FAIL** – Actual output differs from the expected output
+* **UI Error** – The script encountered an issue interacting with the page
 
 All 50 test cases in this submission are expected to result in **FAIL**, as they were specifically chosen to expose transliteration errors in the application.
 
----
+\---
 
 ## Singlish Input Types Covered
 
@@ -129,11 +130,14 @@ All 24 input types from Appendix 1 of the assignment are covered with at least 2
 23. Online Identifiers in Singlish
 24. Inputs Containing Emojis
 
----
+\---
 
 ## Dependencies
 
-| Package | Purpose |
-|---|---|
-| `playwright` | Browser automation for UI testing |
-| `openpyxl` | Reading and writing Excel (.xlsx) files |
+|Package|Purpose|
+|-|-|
+|`playwright`|Browser automation for UI testing|
+|`openpyxl`|Reading and writing Excel (.xlsx) files|
+
+
+
